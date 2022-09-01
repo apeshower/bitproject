@@ -1,0 +1,107 @@
+@import '../../styles/mixins/responsive.scss';
+
+.container {
+    background-color: rgba(21, 8, 46, 1);
+    padding: 0 6.5rem 9.75rem 6.5rem;
+    padding-bottom: 3.375rem;
+
+    @include mq('tablet-wide', max) {
+        padding: 0 2rem;
+    }
+}
+
+.mainTitle {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 162.19%;
+    opacity: 0.8;
+    font-family: 'Michroma', sans-serif;
+    background-color: black;
+    color: transparent;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+
+    @include mq('tablet-wide', max) {
+        margin-bottom: 4.625rem;
+    }
+
+    @include mq('phone-wide', max) {
+        font-size: 1.25rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.column {
+    .title {
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 27px;
+        margin-bottom: 1.875rem;
+
+        @include mq('phone-wide', max) {
+            font-size: 19px;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    .list {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 1.25rem;
+
+        @include mq('phone-wide', max) {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.firstColumn {
+    margin-right: 100px;
+
+    @include mq('tablet-wide', max) {
+        margin-right: 5rem;
+    }
+
+    @include mq('phone-wide', max) {
+        margin-bottom: 3.625rem;
+    }
+}
+
+.secondColumn {
+    margin-right: 143px;
+
+    @include mq('phone-wide', max) {
+        margin-bottom: 2.75rem;
+    }
+}
+
+.inputContainer {
+    width: 100%;
+    margin-top: 2.5rem;
+    position: relative;
+
+    @include mq('phone-wide', max) {
+        margin-top: 1.5rem;
+    }
+
+    input {
+        width: 233px;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 40px;
+        padding: 0.5rem 1.25rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .submitButton {
+        position: absolute;
+        height: 19px;
+        top: 7px;
+        right: 20px;
+    }
+}

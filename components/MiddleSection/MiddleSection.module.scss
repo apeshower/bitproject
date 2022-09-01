@@ -1,0 +1,101 @@
+@import '../../styles/mixins/responsive.scss';
+
+.container {
+    background-color: rgba(21, 8, 46, 1);
+    padding: 0 6rem;
+    padding-bottom: 8.875rem;
+
+    @include mq('tablet-wide', max) {
+        padding: 0 2rem;
+        padding-bottom: 4.375rem;
+    }
+}
+
+.textContainer {
+    max-width: 545px;
+    margin-right: 6rem;
+
+    @include mq('phone-wide', max) {
+        max-width: 221px;
+        margin-right: 0;
+    }
+
+    .title {
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 97px;
+        margin-bottom: 1.25rem;
+        margin-top: 1rem;
+        font-family: 'Michroma', sans-serif;
+        background-color: black;
+        color: transparent;
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: white;
+        opacity: 0.8;
+
+        @include mq('tablet-wide', max) {
+            font-size: 2.25rem;
+            line-height: 58px;
+            margin-bottom: 2.5rem;
+        }
+
+        @include mq('phone-wide', max) {
+            font-size: 1.625rem;
+            line-height: 162.19%;
+        }
+    }
+
+    .description {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 150.19%;
+        margin-bottom: 3.125rem;
+        font-family: 'Roboto', sans-serif;
+
+        @include mq('tablet-wide', max) {
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 33px;
+            margin-bottom: 2.5rem;
+            max-width: 100%;
+        }
+
+        @include mq('phone-wide', max) {
+            font-size: 1rem;
+            line-height: 22px;
+        }
+    }
+
+    .actionButton {
+        background: linear-gradient(180deg, #7E49DF 0%, #4051F9 100%);
+        border-radius: 20px;
+        padding: 1rem 1.5rem;
+        width: fit-content;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+
+        @include mq('tablet-wide', max) {
+            margin-bottom: 4.375rem;
+        }
+    }
+}
+
+.imageContainer {
+    img {
+        height: 600px;
+
+        @include mq('tablet-wide', max) {
+            height: 740px;
+            margin-left: -30px;
+        }
+
+        @include mq('phone-wide', max) {
+            height: 314px;
+        }
+    }
+}
