@@ -106,7 +106,7 @@ const TopTrendingList = () => {
                     TrendingItem.map((item: any) => {
                         return (
                             <Grid item xs={12} sm={6} md={'auto'} key={item.id}>
-                                <div className={item.id === 3 || item.id === 6 || item.id === 9 ? `${styles.lastGrid} ${styles.topTrendingContainer}`: `${styles.grid} ${styles.topTrendingContainer}`}>
+                                <div className={item.id === 3 || item.id === 6 || item.id === 9 ? `${styles.lastGrid} ${styles.topTrendingContainer}` : item.id === 2 || item.id === 5 || item.id === 8 ? `${styles.middleGrid} ${styles.topTrendingContainer}`: `${styles.grid} ${styles.topTrendingContainer}`}>
                                     <div className={styles.number}>{item.id}</div>
                                     <img src={item.image} />
                                     <div className={styles.name}>

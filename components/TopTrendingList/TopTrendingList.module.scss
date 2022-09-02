@@ -21,10 +21,18 @@
 
 .topTrendingWrapper {
     padding: 0 1.125rem 0 2.375rem;
+
+    @include mq('tablet-wide', max) {
+        padding: 0;
+    }
 }
 
 .grid {
     width: 500px;
+}
+
+.middleGrid {
+    width: 516px;
 }
 
 .mainHeading {
