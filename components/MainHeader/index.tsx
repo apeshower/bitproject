@@ -10,7 +10,7 @@ const MainHeader = () => {
             </Grid>
             <Grid item xs>
                 <div className={styles.logoContainer}>
-                    <div>BID NFT</div>
+                    <div className={styles.text}>BID NFT</div>
                 </div>
             </Grid>
             <Grid item xs="auto" className={styles.desktopMenu}>

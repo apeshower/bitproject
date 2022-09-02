@@ -200,8 +200,10 @@ const NftList = () => {
     }
     return (
         <div className={styles.container}>
+            <div className={styles.wrapper}>
             <MainHeading/>
             <NftItem/>
+            </div>
         </div>
     )
 }

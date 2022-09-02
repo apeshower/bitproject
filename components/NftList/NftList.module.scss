@@ -6,9 +6,15 @@
     padding-bottom: 3.375rem;
 }
 
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .headingContainer {
     padding-top: 5.25rem;
     margin-bottom: 6rem;
+    padding-right: 2rem;
 
     @include mq('tablet-wide', max) {
         margin-bottom: 2.875rem;
