@@ -18,7 +18,7 @@
 
 .textContainer {
     max-width: 545px;
-    margin-right: 6rem;
+    margin-right: 5rem;
 
     @include mq('phone-wide', max) {
         max-width: 221px;

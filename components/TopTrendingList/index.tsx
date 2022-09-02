@@ -70,12 +70,43 @@ const TopTrendingList = () => {
 
     const TopTrendingItem = () => {
         return (
-            <Grid container>
-                { width <= 425 ?
-                    TrendingItem.slice(0, 3).map((item: any) => {
+            <div className={styles.topTrendingWrapper}>
+                <Grid container>
+                    { width <= 425 ?
+                        TrendingItem.slice(0, 3).map((item: any) => {
+                            return (
+                                <Grid item xs={12} sm={6} md={4} key={item.id}>
+                                    <div className={styles.topTrendingContainer}>
+                                        <div className={styles.number}>{item.id}</div>
+                                        <img src={item.image} />
+                                        <div className={styles.name}>
+                                            <div className={styles.title}>{item.name}</div>
+                                            <div className={styles.stat}>{item.stat}</div>
+                                        </div>
+                                    </div>
+                                </Grid>
+                            )
+                        })
+                    : width <= 768 ?
+                        TrendingItem.slice(0, 6).map((item: any) => {
+                            return (
+                                <Grid item xs={12} sm={6} md={4} key={item.id}>
+                                    <div className={styles.topTrendingContainer}>
+                                        <div className={styles.number}>{item.id}</div>
+                                        <img src={item.image} />
+                                        <div className={styles.name}>
+                                            <div className={styles.title}>{item.name}</div>
+                                            <div className={styles.stat}>{item.stat}</div>
+                                        </div>
+                                    </div>
+                                </Grid>
+                            )
+                        })
+                    : 
+                    TrendingItem.map((item: any) => {
                         return (
-                            <Grid item xs={12} sm={6} md={4} key={item.id}>
-                                <div className={styles.topTrendingContainer}>
+                            <Grid item xs={12} sm={6} md={'auto'} key={item.id}>
+                                <div className={item.id === 3 || item.id === 6 || item.id === 9 ? `${styles.lastGrid} ${styles.topTrendingContainer}`: `${styles.grid} ${styles.topTrendingContainer}`}>
                                     <div className={styles.number}>{item.id}</div>
                                     <img src={item.image} />
                                     <div className={styles.name}>
@@ -86,38 +117,9 @@ const TopTrendingList = () => {
                             </Grid>
                         )
                     })
-                : width <= 768 ?
-                    TrendingItem.slice(0, 6).map((item: any) => {
-                        return (
-                            <Grid item xs={12} sm={6} md={4} key={item.id}>
-                                <div className={styles.topTrendingContainer}>
-                                    <div className={styles.number}>{item.id}</div>
-                                    <img src={item.image} />
-                                    <div className={styles.name}>
-                                        <div className={styles.title}>{item.name}</div>
-                                        <div className={styles.stat}>{item.stat}</div>
-                                    </div>
-                                </div>
-                            </Grid>
-                        )
-                    })
-                : 
-                TrendingItem.map((item: any) => {
-                    return (
-                        <Grid item xs={12} sm={6} md={4} key={item.id}>
-                            <div className={styles.topTrendingContainer}>
-                                <div className={styles.number}>{item.id}</div>
-                                <img src={item.image} />
-                                <div className={styles.name}>
-                                    <div className={styles.title}>{item.name}</div>
-                                    <div className={styles.stat}>{item.stat}</div>
-                                </div>
-                            </div>
-                        </Grid>
-                    )
-                })
-                }
-            </Grid>
+                    }
+                </Grid>
+            </div>
         )
             
     }
