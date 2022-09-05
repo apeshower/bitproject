@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Grid } from "@mui/material";
 import styles from './MainHeader.module.scss';
 
 const MainHeader = () => {
+
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+    window.addEventListener("scroll", () => {
+        setScroll(window.scrollY > 1200);
+    });
+    }, []);
     return (
-        <Grid container className={styles.mainHeaderContainer}>
+        <Grid container className={ scroll ? `${styles.mainHeaderContainer} ${styles.scroll}` : `${styles.mainHeaderContainer}`}>
             <Grid item xs="auto" className={styles.mobileMenu}>
                 <img src="/hamburger-icon.png" alt="mobile-nav" />
             </Grid>

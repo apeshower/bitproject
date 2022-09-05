@@ -1,13 +1,17 @@
 @import '../../styles/mixins/responsive.scss';
 
 .mainHeaderContainer {
-    margin-top: 26px;
+    padding: 26px 2rem;
     position: fixed;
-    padding: 0 2rem;
+    z-index: 999;
 
     @include mq('phone-wide', max) {
         margin-top: 1.25rem;
     }
+}
+
+.scroll {
+    background: black;
 }
 
 .mobileMenu {
